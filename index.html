@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  </head>
+  <body>
+    <div class="main-box">
+      <h1>Chat Box <span> <button onclick="dropdown()"><i class="fa-solid fa-ellipsis-vertical"></i></button> </span></h1>
+      <div id="drobox">
+        <p onclick="clearBtn()" id="clear">Clear Chat</p>
+      </div>
+      <div class="message-box">
+        <div id="output" class="output"></div>
+        <div class="chat-col">
+        <input type="text" placeholder="Enter Your Message" class="input" id="input" />
+        <button onclick="sendBtn()">Send Message</button>
+      </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
