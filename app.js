@@ -6,7 +6,7 @@ function sendBtn() {
   arr.push(input.value);
   output.innerHTML = "";
   arr.map((item) => {
-    output.innerHTML += `<p><b>You</b> ${item}</p>}`;
+    output.innerHTML += `<p><b>You</b> ${item}</p>`;
   });
 
   if (input.value == "") {
