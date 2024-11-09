@@ -6,8 +6,8 @@ function sendBtn() {
   arr.push(input.value);
   output.innerHTML = "";
   arr.map((item) => {
-    output.innerHTML += `<p>${item}  <br/> </p>`;
-  }, 2000);
+    output.innerHTML += `<p><b>You</b> ${item}</p>}`;
+  });
 
   if (input.value == "") {
     Swal.fire("Please Enter Something");
@@ -31,6 +31,7 @@ function dropdown() {
 function clearBtn() {
   output.innerHTML = "";
   arr = [];
+  drobox.style.display = "none";
 }
 
 input.addEventListener("keyup", function (event) {
@@ -38,7 +39,7 @@ input.addEventListener("keyup", function (event) {
     arr.push(input.value);
     output.innerHTML = "";
     arr.map((item) => {
-      output.innerHTML += `<p>${item}  <br/> </p>`;
+      output.innerHTML += `<p><b>You:</b> ${item}  <br/> </p>`;
     }, 2000);
 
     if (input.value == "") {
@@ -47,4 +48,25 @@ input.addEventListener("keyup", function (event) {
 
     input.value = "";
   }
+});
+
+let body = document.querySelector("body");
+let darkBtn = document.querySelector(".darkBtn");
+let colorBox = document.querySelector(".main-box");
+let chatCol = document.querySelector(".chat-col");
+
+darkBtn.addEventListener("click", function () {
+  if (body.style.backgroundColor === "rgb(0, 0, 0)") {
+    body.style.backgroundColor = "#fff";
+    output.style.backgroundColor = "#fff";
+    chatCol.style.backgroundColor = "#fff";
+    colorBox.style.boxShadow = "1px 1px 5px #000";
+  } else {
+    body.style.backgroundColor = "#000";
+    output.style.backgroundColor = "#000";
+    chatCol.style.backgroundColor = "#000";
+    colorBox.style.boxShadow = "1px 1px 5px #fff";
+  }
+
+  drobox.style.display = "none";
 });
