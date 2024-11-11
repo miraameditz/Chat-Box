@@ -6,7 +6,7 @@ function sendBtn() {
   arr.push(input.value);
   output.innerHTML = "";
   arr.map((item) => {
-    output.innerHTML += `<p><b>You</b> ${item}</p>`;
+    output.innerHTML += `<p><b>You: </b> ${item}</p>`;
   });
 
   if (input.value == "") {
@@ -61,12 +61,15 @@ darkBtn.addEventListener("click", function () {
     output.style.backgroundColor = "#fff";
     chatCol.style.backgroundColor = "#fff";
     colorBox.style.boxShadow = "1px 1px 5px #000";
+    darkBtn.innerHTML = "Dark Theme"
   } else {
     body.style.backgroundColor = "#000";
     output.style.backgroundColor = "#000";
     chatCol.style.backgroundColor = "#000";
     colorBox.style.boxShadow = "1px 1px 5px #fff";
+    darkBtn.innerHTML = "Light Theme"
   }
+
 
   drobox.style.display = "none";
 });
